@@ -31,7 +31,7 @@ export default function Home() {
     <div className={happy_Monkey.className}>
       <Head>
         <title>Ticket</title>
-        <meta name="website for the Ticket token" content="The Ticket " />
+        <meta name="Website for the Ticket token" content="The Ticket " />
       </Head>
 
       {/* Navbar */}
@@ -47,7 +47,7 @@ export default function Home() {
     <div className="ml-3">
       <p className="text-lg font-bold">Ticket</p>
       <p className="text-xs text-black italic">Ready to leave the trenches, anon ?</p>
-      <p className='text-xs text-black italic'> The ticker is Ticket</p>
+      <p className='text-xs text-black italic'> Get your ticket</p>
 
     </div>
   </div>
@@ -68,6 +68,10 @@ export default function Home() {
       Tokenomics & Roadmap
     </a>
 
+    <a href="#link-section" className="text-blue-800 text-xs hover:text-gray-600 transition-colors">
+      Links
+    </a>
+
     {/* <a href="#section3" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
       Road Map
     </a> */}
@@ -76,7 +80,7 @@ export default function Home() {
 
       {/* Section 1: Background Image with Text */}
       <section
-        className="h-screen bg-cover bg-center flex items-center justify-center bg-yellow-200"
+        className="h-screen bg-cover bg-center flex items-center justify-center bg-white"
         style={{
           backgroundImage: "url('/ticketlogo.png')",
           backgroundSize: '70% 70%', // Width: 100%, Height: 25%
@@ -92,7 +96,7 @@ export default function Home() {
       </section>
 
         {/* Section 3: Yellow Text with Equal Space */}
-        <section id="about" className="p-8 bg-gray-200">
+        <section id="about" className="p-8 bg-white">
         <div className="max-w-2xl mx-auto text-center">
           <p className="mb-2"> <span className='font-bold text-blue-900'>TICKET</span> is the new memecoin from <span className='font-bold text-red-800'>Providence Labs</span>.</p>
           <p className="mb-2"><span className='font-bold text-red-900'>TICKET</span> is your permission to play.</p>
@@ -108,11 +112,11 @@ export default function Home() {
       </section>
 
       {/* Section 2: Centered Text with Copy Functionality */}
-      <section id="private-sale" className="p-8 bg-pink-100">
+      <section id="private-sale" className="p-8 bg-gray-300">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="mb-2">Ticket Private Sale is Live</p> 
+          <p className="mb-2 text-blue-800 text-lg">Ticket Private Sale is Live</p> 
           <p className="mb-1">Target raise: 20 Sol</p>
-          <p className="mb-2">To participate send Sol to CA:</p>
+          <p className="mb-2">To participate send Sol to CA <span className='text-xs'>(click to copy)</span>:</p>
           {/* <p className="mb-4">From funny characters to adventurous plots, cartoons are timeless.</p>
           <p>Let&apos;s celebrate the art of animation!</p> */}
 
@@ -121,7 +125,7 @@ export default function Home() {
             className="mt-4 mb-4 p-2 bg-gray-400 rounded-lg cursor-pointer hover:bg-gray-600 transition-colors"
             onClick={handleCopy}
           >
-            <code className="text-sm text-gray-800">
+            <code className="text-xs md:text-sm text-gray-800">
               6wdBgYfsU5CBUFKJXnZjBx4dSeKdMJjrKejir1pAze3w
             </code>
             {isCopied && (
@@ -161,9 +165,9 @@ export default function Home() {
     
 
       {/* Footer */}
-      <footer className="bg-gray-400 p-4 text-center">
-      <p>Copyright 2025 Providence Labs</p>
-      <p>The Ticker is Ticket</p>
+      <footer id = 'link-section' className="bg-gray-400 p-4 text-center text-xs">
+      <p>Made with love at Providence Labs</p>
+      <p>The ticker is Ticket. Copyright 2025</p>
 
       {/* Social Media Links */}
       <div className="flex justify-center space-x-4 mt-4">
