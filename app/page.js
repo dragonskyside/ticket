@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <div className={happy_Monkey.className}>
       <Head>
-        <title>Cartoon Website</title>
-        <meta name="description" content="A fun and joyful cartoon-themed website" />
+        <title>Ticket</title>
+        <meta name="website for the Ticket token" content="the ticket " />
       </Head>
 
       {/* Navbar */}
