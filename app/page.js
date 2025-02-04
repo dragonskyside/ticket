@@ -1,101 +1,185 @@
-import Image from "next/image";
+'use client'
+// import { Inter } from 'next/font/google';
+import { Happy_Monkey } from 'next/font/google';
+import Head from 'next/head';
+import { useState } from 'react';
+import { FaTelegram, FaTwitter } from 'react-icons/fa'; // Import icons
+
+// Load Google Font
+// const inter = Inter({ subsets: ['latin'], weight: ['400', '700'] });
+const happy_Monkey = Happy_Monkey({ weight:'400', subsets: ['latin'], display: 'swap'});
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [isCopied, setIsCopied] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('6wdBgYfsU5CBUFKJXnZjBx4dSeKdMJjrKejir1pAze3w');
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
+  return (
+    <div className={happy_Monkey.className}>
+      <Head>
+        <title>Cartoon Website</title>
+        <meta name="description" content="A fun and joyful cartoon-themed website" />
+      </Head>
+
+      {/* Navbar */}
+     {/* Navbar */}
+<nav className="bg-gray-200 p-4 flex justify-between items-center">
+  {/* Left: Image with Byline */}
+  <div className="flex items-center">
+    <img
+      src="/ticketlogo.png" // Replace with your image path
+      alt="Logo"
+      className="h-12 w-14"
+    />
+    <div className="ml-3">
+      <p className="text-lg font-bold">Ticket</p>
+      <p className="text-xs text-black italic">Ready to leave the trenches, anon ?</p>
+      <p className='text-xs text-black italic'> The ticker is Ticket</p>
+
+    </div>
+  </div>
+
+  {/* Right: Clickable Links */}
+  <div className="flex space-x-6">
+    <a href="#section1" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+      Home
+    </a>
+    <a href="#about" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+      About
+    </a>
+    <a href="#private-sale" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+      Private Sale
+    </a>
+    
+    <a href="#image-section" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+      Tokenomics & Roadmap
+    </a>
+
+    {/* <a href="#section3" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+      Road Map
+    </a> */}
+  </div>
+</nav>
+
+      {/* Section 1: Background Image with Text */}
+      <section
+        className="h-screen bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/ticketlogo.png')",
+          backgroundSize: '70% 70%', // Width: 100%, Height: 25%
+          backgroundPosition: 'center', // Center the image
+          backgroundRepeat: 'no-repeat', // Prevent repeating
+        }}
+      >
+        {/* <div className="text-center text-blue-600 bg-white bg-opacity-75 p-6 rounded-lg">
+          <p className="mb-4">Welcome to our fun and joyful cartoon world!</p>
+          <p className="mb-4">Explore the magic of creativity and imagination.</p>
+          <p>Let&apos;s make your day brighter with smiles and laughter.</p>
+        </div> */}
+      </section>
+
+        {/* Section 3: Yellow Text with Equal Space */}
+        <section id="about" className="p-8 bg-gray-200">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="mb-2"> <span className='font-bold text-blue-900'>TICKET</span> is the new memecoin from <span className='font-bold text-red-800'>Providence Labs</span>.</p>
+          <p className="mb-2"><span className='font-bold text-red-900'>TICKET</span> is your permission to play.</p>
+         
+          <p className="mb-2">The reward for coming. For being early. For believing.</p>
+          {/* <p className="mb-2">The reward for coming, being early, staying to play.</p> */}
+          <p className="mb-2">The sacrifice and pain are about to pay off, your seat on a moonshot is assured.</p>
+          <p className='mb-2'>We are doing this the old fashioned way: no kols, no bullshit. Just a doxxed dev and community of believers.</p>
+          <p>Fuck the jeets and fudders. Fuck the ruggers on PumpFun.</p>
+          <p className="mb-2"><span className='font-bold text-blue-900'>TICKET</span> is your escape from the trenches.</p>
+          <p> Get your <span className='font-bold text-red-900'>TICKET</span>. The fun starts at 50 million.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      </section>
+
+      {/* Section 2: Centered Text with Copy Functionality */}
+      <section id="private-sale" className="p-8 bg-pink-100">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="mb-2">Ticket Private Sale is Live</p> 
+          <p className="mb-1">Target raise: 20 Sol</p>
+          <p className="mb-2">To participate send Sol to CA:</p>
+          {/* <p className="mb-4">From funny characters to adventurous plots, cartoons are timeless.</p>
+          <p>Let&apos;s celebrate the art of animation!</p> */}
+
+          {/* Clickable Text Block */}
+          <div
+            className="mt-4 mb-4 p-2 bg-gray-400 rounded-lg cursor-pointer hover:bg-gray-600 transition-colors"
+            onClick={handleCopy}
+          >
+            <code className="text-sm text-gray-800">
+              6wdBgYfsU5CBUFKJXnZjBx4dSeKdMJjrKejir1pAze3w
+            </code>
+            {isCopied && (
+              <span className="ml-2 text-green-600">Copied!</span>
+            )}
+            
+          </div>
+
+          <div className= 'max-w-2xl mx-auto text-center text-xs'>
+            <p>Min 1 Sol Max 3 Sol per wallet</p>
+            <p> Ticket tokens will be sent to participating wallets before launch on Orca. Excess above 20 target Sol will be returned.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* roadmap */}
+
+  
+
+  <section id="image-section" className="py-12 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row gap-8">
+      <img
+        src="/tokenomics.png"
+        alt="Image 1"
+        className="w-full md:w-1/2 rounded-lg shadow-lg"
+      />
+      <img
+        src="/tokenomics.png"
+        alt="Image 2"
+        className="w-full md:w-1/2 rounded-lg shadow-lg"
+      />
+    </div>
+  </div>
+</section>
+
+    
+
+      {/* Footer */}
+      <footer className="bg-gray-400 p-4 text-center">
+      <p>Copyright 2025 Providence Labs</p>
+      <p>The Ticker is Ticket</p>
+
+      {/* Social Media Links */}
+      <div className="flex justify-center space-x-4 mt-4">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://t.me/+RbUtbxemkU4zY2M0"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-gray-800 hover:text-gray-600 transition-colors"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          <FaTelegram className="w-6 h-6" /> {/* Telegram Icon */}
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://twitter.com/your-twitter-link"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-gray-800 hover:text-gray-600 transition-colors"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <FaTwitter className="w-6 h-6" /> {/* Twitter Icon */}
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+    </footer>
     </div>
   );
 }
