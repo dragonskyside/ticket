@@ -98,16 +98,16 @@ export default function Home() {
         {/* Section 3: Yellow Text with Equal Space */}
         <section id="about" className="p-8 bg-white">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="mb-2"> <span className='font-bold text-blue-900'>TICKET</span> is the new memecoin from <span className='font-bold text-red-800'>Providence Labs</span>.</p>
-          <p className="mb-2"><span className='font-bold text-red-900'>TICKET</span> is your permission to play.</p>
+          <p className="mb-2"> <span className='font-bold text-blue-900'>TICKET -</span> the memecoin from <span className='font-bold text-red-800'>Providence Labs</span>.</p>
+          <p className="mb-2">Your golden ticket to the moon.</p>
          
-          <p className="mb-2">The reward for coming. For being early. For believing.</p>
+          <p className="mb-2">Reward for being early. For believing. For staying</p>
           {/* <p className="mb-2">The reward for coming, being early, staying to play.</p> */}
-          <p className="mb-2">The sacrifice and pain are about to pay off, your seat on a moonshot is assured.</p>
-          <p className='mb-2'>We are doing this the old fashioned way: no kols, no bullshit. Just a doxxed dev and community of believers.</p>
+          <p className="mb-2">The grind is over. Your seat is assured.</p>
+          <p className='mb-2'>No insiders no nonsense. Just a doxxed dev and community that believes.</p>
           <p>Fuck the jeets and fudders. Fuck the ruggers on PumpFun.</p>
-          <p className="mb-2"><span className='font-bold text-blue-900'>TICKET</span> is your escape from the trenches.</p>
-          <p> Get your <span className='font-bold text-red-900'>TICKET</span>. The fun starts at 50 million.</p>
+          <p className="mb-2"><span className='font-bold text-blue-900'>TICKET</span> is your way out.</p>
+          <p> Get your <span className='font-bold text-red-900'>TICKET</span> now. The ride begins at 50 million.</p>
         </div>
       </section>
 
