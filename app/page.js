@@ -106,8 +106,8 @@ export default function Home() {
           <p className="mb-2">The grind is over. Your seat is assured.</p>
           <p className='mb-2'>No insiders no nonsense. Just a doxxed dev and community that believes.</p>
           <p>Leave the jeets and fudders,the ruggers on PumpFun in the dust.</p>
-          <p className="mb-2"><span className='font-bold text-blue-900'>TICKET</span> is your way out.</p>
-          <p> Get your <span className='font-bold text-red-900'>TICKET</span> now. The ride begins at 50 million.</p>
+          <p className="mb-4 mt-2"><span className='font-bold text-blue-900'>TICKET</span> is your way out.</p>
+          <p> Get your <span className='font-bold text-red-900'>TICKET</span> now. The fun begins at $50 million.</p>
         </div>
       </section>
 
