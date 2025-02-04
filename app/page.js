@@ -7,7 +7,12 @@ import { FaTelegram, FaTwitter } from 'react-icons/fa'; // Import icons
 
 // Load Google Font
 // const inter = Inter({ subsets: ['latin'], weight: ['400', '700'] });
-const happy_Monkey = Happy_Monkey({ weight:'400', subsets: ['latin'], display: 'swap'});
+const happy_Monkey = Happy_Monkey ({ weight:'400', subsets: ['latin'], display: 'swap'});
+
+// export const metadata = {
+//   title: "Ticket",
+//   description: "Have you bought your ticket, Anon ?"
+// }
 
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
@@ -26,7 +31,7 @@ export default function Home() {
     <div className={happy_Monkey.className}>
       <Head>
         <title>Ticket</title>
-        <meta name="website for the Ticket token" content="the ticket " />
+        <meta name="website for the Ticket token" content="The Ticket " />
       </Head>
 
       {/* Navbar */}
