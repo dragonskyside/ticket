@@ -49,17 +49,17 @@ export default function Home() {
 
   {/* Right: Clickable Links */}
   <div className="flex space-x-6">
-    <a href="#section1" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+    <a href="#section1" className="text-red-800 text-xs hover:text-gray-600 transition-colors">
       Home
     </a>
-    <a href="#about" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+    <a href="#about" className="text-blue-800 text-xs hover:text-gray-600 transition-colors">
       About
     </a>
-    <a href="#private-sale" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+    <a href="#private-sale" className="text-green-800 text-xs hover:text-gray-600 transition-colors">
       Private Sale
     </a>
     
-    <a href="#image-section" className="text-gray-800 text-xs hover:text-gray-600 transition-colors">
+    <a href="#image-section" className="text-yellow-800 text-xs hover:text-gray-600 transition-colors">
       Tokenomics & Roadmap
     </a>
 
@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* Section 1: Background Image with Text */}
       <section
-        className="h-screen bg-cover bg-center flex items-center justify-center"
+        className="h-screen bg-cover bg-center flex items-center justify-center bg-yellow-200"
         style={{
           backgroundImage: "url('/ticketlogo.png')",
           backgroundSize: '70% 70%', // Width: 100%, Height: 25%
@@ -142,12 +142,12 @@ export default function Home() {
       <img
         src="/tokenomics.png"
         alt="Image 1"
-        className="w-full md:w-1/2 rounded-lg shadow-lg"
+        className="w-full md:w-[50%] rounded-lg shadow-lg"
       />
       <img
-        src="/tokenomics.png"
+        src="/ticketroadmap.png"
         alt="Image 2"
-        className="w-full md:w-1/2 rounded-lg shadow-lg"
+        className="w-full md:w-[60%] rounded-lg shadow-lg"
       />
     </div>
   </div>
