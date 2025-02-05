@@ -3,6 +3,7 @@ import { Happy_Monkey } from 'next/font/google';
 import Head from 'next/head';
 import { useState } from 'react';
 import { FaTelegram, FaTwitter } from 'react-icons/fa'; // Import icons
+import './globals.css'
 
 // Load Google Font
 const happy_Monkey = Happy_Monkey({ weight: '400', subsets: ['latin'], display: 'swap' });
@@ -152,7 +153,7 @@ export default function Home() {
             onClick={handleCopy}
           >
             <code className="text-xs md:text-sm text-gray-800">
-              6wdBgYfsU5CBUFKJXnZjBx4dSeKdMJjrKejir1pAze3w
+            62PTUuqgP6fiWZH13LHifnELapL5rNCvAj2Yisc4o8Tw
             </code>
             {isCopied && <span className="ml-2 text-green-600">Copied!</span>}
           </div>
